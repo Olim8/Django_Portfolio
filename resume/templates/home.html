@@ -1,1 +1,33 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block content1 %}
+    <div class="row my-5">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+            <div class="circular-image-container">
+                <img class="circular-image" src="{% static 'images/img.jpg' %}" alt="Image">
+            </div>
+        </div>
+
+        <div class="col-12 text-center mt-3">
+            <h4 class="title">Hi, my name is </h4>
+            <div class="name">
+                <h1>Olimjon Bakaev</h1>
+                <h1>I am a backend developer</h1>
+            </div> 
+        </div>
+
+        <div class="col-12 text-center mt-3">
+            <a href="https://www.linkedin.com/in/olimjon-bakaev-42ba7321b/" target="_blank">
+                <img src="{% static 'images/circle-linkedin-512.webp' %}" alt="images/circle-linkedin-512.webp" width="50" height="50" class="social_links">
+            </a>
+
+            <a href="https://www.instagram.com/olimbakaev08/" target="_blank">
+                <img src="{% static 'images/ins.webp' %}" alt="images/ins.webp" width="50" height="50" class="social_links">>
+            </a>
+
+            <a href="https://t.me/Bakaev_Olimjon" target="_blank">
+                <img src="{% static 'images/telegram.webp' %}" alt="images/telegram.webp" width="50" height="50" class="social_links">>
+            </a>
+        </div>
+    </div>
+{% endblock content1 %}
