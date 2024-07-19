@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content1 %}
+    <div class="row my-5">
+        <div class="col-4 d-flex justify-content-center align-items-center">
+            <img src="{% static 'images/olim.jpg' %}" alt="image_of_mine" class="about_image">
+        </div>
+
+        <div class="col-7 text-left text-light">
+            <h2>Hello !</h2>
+            <p class="fs-5">
+                I code and maintain web applications using the Django framework. I focus on server-side logic, manage databases, collaborate with front-end teams, and integrate applications with other systems. I also troubleshoot, test, and update existing applications to improve functionality and security.
+            </p>
+            <p class="fs-5">
+                I ensure the website performs correctly, focusing on databases, back-end logic, application programming interface (APIs), architecture, and servers. I use code that helps browsers communicate with databases, store, understand, and delete data.
+            </p>
+        </div>
+    </div>
+
+    <div class="row my-2">
+        <h2 class="text-center" style="color:#4fffb0">My Tech Stack</h2>
+
+        <div class="d-flex justify-content-around align-items-center my-3">
+            <img 
+                src="{% static 'images/html.png' %}" 
+                alt="HTML Logo" 
+                width="70" 
+                height="70" 
+                class="img-fluid"
+            >
+
+            <img 
+                src="{% static 'images/css.webp' %}" 
+                alt="Css Logo" 
+                width="70" 
+                height="70" 
+                class="img-fluid"
+            >
+
+            <img 
+                src="{% static 'images/python.png' %}" 
+                alt="Python Logo" 
+                width="70" 
+                height="70" 
+                class="img-fluid"
+            >
+
+            <img 
+                src="{% static 'images/django.webp' %}" 
+                alt="Django Logo" 
+                width="70" 
+                height="70" 
+                class="img-fluid"
+            >
+            <img 
+                src="{% static 'images/postgre.png' %}" 
+                alt="PostgreSql Logo" 
+                width="70" 
+                height="70" 
+                class="img-fluid"
+            >
+
+            <img 
+                src="{% static 'images/git.png' %}" 
+                alt="Git Logo" 
+                width="70" 
+                height="70" 
+                class="img-fluid"
+            >
+        </div>
+    </div>
+{% endblock content1 %}

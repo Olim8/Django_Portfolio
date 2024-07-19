@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content1 %}
+
+<div class="row my-2">
+    {% for project in projects_show %}
+    <div class="col-6 my-2">
+        <h4 class="text-light">{{ project.title }}</h4>
+        <a href="https://github.com/Olim8"><img src="{% static project.path %}" width="550" height="800" class="img-fluid"></a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content1 %}
