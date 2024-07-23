@@ -23,6 +23,10 @@ def projects(request):
             'title':'Django_Portfolio',
             'path':'images/portfolio.png'
         },
+        {
+            'title':'CRUD',
+            'path':'images/crud.jpg'
+        },
     ]
 
     return render(request, 'projects.html', {"projects_show":projects_show})
