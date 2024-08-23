@@ -27,6 +27,10 @@ def projects(request):
             'title':'CRUD',
             'path':'images/crud.jpg'
         },
+        {
+            'title':'Ecommerce',
+            'path':'images/ecommerce.jpg'
+        },
     ]
 
     return render(request, 'projects.html', {"projects_show":projects_show})
