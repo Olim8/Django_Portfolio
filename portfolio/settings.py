@@ -19,8 +19,8 @@ SECRET_KEY = 'django-insecure-%*hntke%eiygc+$_+u_ljb@w3d83p7x2cyqw(%8y^_7$e$x^^x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-CSRF_TRUSTED_ORIGINS = []
+ALLOWED_HOSTS = ['courteous-truth-production.up.railway.app', 'https://courteous-truth-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['courteous-truth-production.up.railway.app', 'https://courteous-truth-production.up.railway.app']
 
 
 # Application definition
