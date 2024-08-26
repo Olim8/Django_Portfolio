@@ -12,4 +12,4 @@ class Contact(models.Model):
         verbose_name_plural = 'contact us'
 
     def __str__(self):
-        return self.name
+        return f'Message from {self.name}'

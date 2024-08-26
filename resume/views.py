@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.staticfiles.storage import staticfiles_storage
+from .models import Contact
+from django.contrib import messages
 
 
 def home(request):
@@ -47,7 +49,17 @@ def experiences(request):
     return render(request, 'experiences.html', {"experiences":experiences})
 
 def contact(request):
+    if request.method == 'POST':
+        fname = request.POST.get('name')
+        femail = request.POST.get('email')
+        fphone = request.POST.get('phone')
+        fmessage = request.POST.get('msg')
+        query = Contact(name=fname, email=femail, phone=fphone, message=fmessage)
+        query.save()
+        messages.info(request, 'Thanks For Contacting Me!')
+        return redirect('/contact')
     return render(request, 'contact.html')
+
 
 def resume(request):
     resume_path = "myapp/resume.docx"

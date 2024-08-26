@@ -24,22 +24,22 @@
 
     <div class="col-5 offset-1 mt-3">
         <div class="container form-container">
-            <form>
+            <form action="/contact" method="post"> {% csrf_token %}
                 <div class="form-group m-3">
-                    <label for="exampleInputEmail1">Name</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name">
                 </div>
                 <div class="form-group m-3">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email">
+                    <input type="email" class="form-control" id="email" name="email">
                 </div>
                 <div class="form-group m-3">
                     <label for="phone">Phone number</label>
-                    <input type="tel" class="form-control" id="phone">
+                    <input type="tel" class="form-control" id="phone" name="phone">
                 </div>
                 <div class="form-group m-3">
                     <label for="msg">Message</label>
-                    <textarea type="tel" class="form-control" id="msg" rows="2"></textarea>
+                    <textarea type="tel" class="form-control" id="msg" name="msg" rows="2"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
