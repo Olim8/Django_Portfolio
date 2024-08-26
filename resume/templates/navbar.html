@@ -1,3 +1,4 @@
+{% load static %}
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand ms-5 m-2" style="padding-right: 450px;" href="/"></a>
@@ -22,7 +23,7 @@
             <a class="nav-link" href="{% url 'contact' %}">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'resume' %}">Resume</a>
+            <a class="nav-link" href="{% static 'myApp/resume.docx' %}" download>Resume</a>
           </li>
         </ul>
       </div>
