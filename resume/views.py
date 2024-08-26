@@ -57,7 +57,7 @@ def contact(request):
         query = Contact(name=fname, email=femail, phone=fphone, message=fmessage)
         query.save()
         messages.info(request, 'Thanks For Contacting Me!')
-        return redirect('/contact')
+        return redirect('contact.html')
     return render(request, 'contact.html')
 
 
