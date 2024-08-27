@@ -3,12 +3,6 @@ from django.http import HttpResponse
 from django.contrib.staticfiles.storage import staticfiles_storage
 from .models import Contact
 from django.contrib import messages
-from django.conf import settings
-# Sending email stuff
-from django.core.mail import send_mail
-from django.core.mail.message import EmailMessage
-from django.core import mail
-
 
 
 def home(request):
@@ -62,13 +56,6 @@ def contact(request):
         fmessage = request.POST.get('msg')
         query = Contact(name=fname, email=femail, phone=fphone, message=fmessage)
         query.save()
-        # Email sending starts
-        from_email = settings.EMAIL_HOST_USER
-        connection = mail.get_connection()
-        connection.open()
-        email_message = mail.EmailMessage(f'Email from {fname}', f'User Email: {femail}\n User Phone Number: {fphone}\n\n Query: {fmessage}', from_email, ['gabistepanov08@gmail.com'], connection=connection)
-        connection.send_messages([email_message])
-        connection.close()
         messages.info(request, 'Thanks For Contacting Me!')
         return redirect('/contact')
     return render(request, 'contact.html')
