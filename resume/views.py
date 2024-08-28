@@ -60,7 +60,7 @@ def contact(request):
 
         # send email
         send_mail(
-            'Message from: ' + femail + '\n Name: ' + fname + '\n Phone: ' + fphone,
+            'Message from: ' + femail + '| Name: ' + fname + '| Phone: ' + fphone,
             'Text: ' + fmessage,
             femail,
             [settings.EMAIL_HOST_USER]
