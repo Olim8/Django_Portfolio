@@ -63,7 +63,7 @@ def contact(request):
             'Message from: ' + femail + '\n Name: ' + fname + '\n Phone: ' + fphone,
             'Text: ' + fmessage,
             femail,
-            settings.EMAIL_HOST_USER,
+            [settings.EMAIL_HOST_USER]
         )
         messages.info(request, 'Thanks For Contacting Me!')
         return redirect('/contact')
