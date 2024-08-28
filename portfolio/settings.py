@@ -17,7 +17,7 @@ load_dotenv()
 SECRET_KEY = 'django-insecure-%*hntke%eiygc+$_+u_ljb@w3d83p7x2cyqw(%8y^_7$e$x^^x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['courteous-truth-production.up.railway.app', 'https://courteous-truth-production.up.railway.app']
 CSRF_TRUSTED_ORIGINS = ['https://courteous-truth-production.up.railway.app']
@@ -130,3 +130,13 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Email settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'gabistepanov08@gmail.com'
+EMAIL_HOST_PASSWORD = 'dpxo hasq bgey sktz'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
