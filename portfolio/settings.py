@@ -17,7 +17,7 @@ load_dotenv()
 SECRET_KEY = 'django-insecure-%*hntke%eiygc+$_+u_ljb@w3d83p7x2cyqw(%8y^_7$e$x^^x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['courteous-truth-production.up.railway.app', 'https://courteous-truth-production.up.railway.app']
 CSRF_TRUSTED_ORIGINS = ['https://courteous-truth-production.up.railway.app']
