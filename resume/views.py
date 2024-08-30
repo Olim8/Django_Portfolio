@@ -19,7 +19,8 @@ def projects(request):
 
 def experiences(request):
     experiences = [
-        'No experience yet',
+        {"company":"No experience yet",
+         "position":"No experience yet"},
     ]
     return render(request, 'experiences.html', {"experiences":experiences})
 
