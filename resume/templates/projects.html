@@ -2,12 +2,26 @@
 {% load static %}
 {% block content1 %}
 
-<div class="row my-2">
-    {% for project in projects_show %}
-    <div class="col-5 my-2 mx-5 border">
-        <h4 class="text-light">{{ project.title }}</h4>
-        <a href="https://github.com/Olim8"><img src="{% static project.path %}" width="550" height="800" class="img-fluid"></a>
-    </div>
+<div class="row my-4">
+    {% for project in projects %}
+        {% if project.is_online %}
+        <div class="card col-3 my-2 mx-2 border" style="width: 40rem; background-color: rgb(20,0,30);">
+            <h4 class="text-light">{{ project.title }}</h4>
+            <img src="{{ project.image.url }}" class="img-fluid" style="height: 300px;">
+            <div class="card-body" style="margin: auto;">
+                <a href="{{ project.github_path }}" class="btn btn-primary" target="_blank">Go To GitHub</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="{{ project.site_path }}" class="btn btn-primary" target="_blank">Go To Site</a>
+            </div>
+        </div>
+        {% else %}
+        <div class="card col-3 my-2 mx-2 border" style="width: 40rem; background-color: rgb(20,0,30)">
+            <h4 class="text-light">{{ project.title }}</h4>
+            <img src="{{ project.image.url }}" class="img-fluid" style="height: 300px;">
+            <div class="card-body" style="margin: auto;">
+                <a href="{{ project.github_path }}" class="btn btn-primary" target="_blank">Go To GitHub</a>
+            </div>
+        </div>
+        {% endif %}
     {% endfor %}
 </div>
 

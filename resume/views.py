@@ -5,6 +5,7 @@ from .models import Contact
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.conf import settings
+from .models import Project
 
 def home(request):
     return render(request, 'home.html')
@@ -13,30 +14,8 @@ def about(request):
     return render(request, 'about.html')
 
 def projects(request):
-    projects_show = [
-        {
-            'title':'Chat_app',
-            'path':'images/Chat_app.png'
-        },
-        {
-            'title':'DRF_authentication',
-            'path':'images/authentication.png'
-        },
-        {
-            'title':'Django_Portfolio',
-            'path':'images/portfolio.png'
-        },
-        {
-            'title':'CRUD',
-            'path':'images/crud.jpg'
-        },
-        {
-            'title':'Ecommerce',
-            'path':'images/ecommerce.jpg'
-        },
-    ]
-
-    return render(request, 'projects.html', {"projects_show":projects_show})
+    projects = Project.objects.all()
+    return render(request, 'projects.html', {'projects':projects})
 
 def experiences(request):
     experiences = [
